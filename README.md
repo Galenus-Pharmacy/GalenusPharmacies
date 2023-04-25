@@ -1,4 +1,5 @@
 # GalenusPharmacies
 Μέχρι σήμερα (25/04/2023)έχουμε παραδόσει για το πρότζεκτ στο μάθημα "Tεχνολογία Λογισμικού" τα Παραδοτέο1, το Παραδοτέο 2 και σήμερα 25/04/2023 
 έχουμε παραδώσει το Παραδοτέο 3.
-![Alt text](C:\Users\Elias\Desktop\Screenshot_1.jpg)
+
+![Screenshot_1](https://user-images.githubusercontent.com/128754241/234222399-922c10c2-5f0e-476a-990e-7b28f1bd7629.jpg)
