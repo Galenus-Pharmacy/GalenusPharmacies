@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2023-05-04T19:04:57.328Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.1 Chrome/112.0.5615.87 Electron/24.1.2 Safari/537.36" etag="CJHgNWLuNbN1BnUh9QP9" version="21.2.1" type="device">
+<mxfile host="Electron" modified="2023-05-05T21:01:46.033Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.1 Chrome/112.0.5615.87 Electron/24.1.2 Safari/537.36" etag="ArubbP-2ygM7XS2Q07qf" version="21.2.1" type="device">
   <diagram name="Page-1" id="7ZvuEQ80qFv35ahoECpq">
     <mxGraphModel dx="1371" dy="1713" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -17,7 +17,7 @@
           <mxGeometry x="20" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="mjIF9ZXAO5rnZLR19kHG-4" value="αρχική οθόνη" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="210" y="10" width="90" height="30" as="geometry" />
+          <mxGeometry x="210" y="3" width="90" height="30" as="geometry" />
         </mxCell>
         <mxCell id="mjIF9ZXAO5rnZLR19kHG-6" value="select_product_management()" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" source="mjIF9ZXAO5rnZLR19kHG-1" target="mjIF9ZXAO5rnZLR19kHG-5" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -34,7 +34,7 @@
           <mxGeometry x="20" y="160" width="10" height="720" as="geometry" />
         </mxCell>
         <mxCell id="mjIF9ZXAO5rnZLR19kHG-8" value="in stock ή &lt;br&gt;out of stock" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="365" width="80" height="40" as="geometry" />
+          <mxGeometry x="365" y="-15" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="mjIF9ZXAO5rnZLR19kHG-10" value="display_stocks()" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" source="mjIF9ZXAO5rnZLR19kHG-2" target="mjIF9ZXAO5rnZLR19kHG-9" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -100,7 +100,7 @@
           <mxGeometry x="20" y="990" width="10" height="60" as="geometry" />
         </mxCell>
         <mxCell id="mjIF9ZXAO5rnZLR19kHG-24" value="Κατηγορίες Προϊόντων" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="475" y="10" width="140" height="30" as="geometry" />
+          <mxGeometry x="480" y="-20" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="mjIF9ZXAO5rnZLR19kHG-26" value="search_instock_products()" style="html=1;verticalAlign=bottom;startArrow=oval;startFill=1;endArrow=block;startSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" source="mjIF9ZXAO5rnZLR19kHG-23" target="mjIF9ZXAO5rnZLR19kHG-38" edge="1">
           <mxGeometry x="-0.2752" width="60" relative="1" as="geometry">
@@ -124,7 +124,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="mjIF9ZXAO5rnZLR19kHG-31" value="προϊόντα κατηγορίας" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="620" y="10" width="130" height="30" as="geometry" />
+          <mxGeometry x="630" y="-7" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="mjIF9ZXAO5rnZLR19kHG-32" value="" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlBoundary;" parent="1" vertex="1">
           <mxGeometry x="820" y="40" width="50" height="1390" as="geometry" />
@@ -133,7 +133,7 @@
           <mxGeometry x="20" y="490" width="10" height="210" as="geometry" />
         </mxCell>
         <mxCell id="mjIF9ZXAO5rnZLR19kHG-33" value="Αύξηση μείωση τιμής,&lt;br&gt;&amp;nbsp;Αύξηση&amp;nbsp; αποθεμάτων,&amp;nbsp;&lt;span style=&quot;border-color: var(--border-color);&quot; lang=&quot;EL&quot;&gt;&amp;nbsp;&lt;br&gt;και Αριθμό πωλήσεων&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="780" y="-15" width="150" height="60" as="geometry" />
+          <mxGeometry x="770" y="-67" width="150" height="60" as="geometry" />
         </mxCell>
         <mxCell id="mjIF9ZXAO5rnZLR19kHG-34" value="display_options()" style="html=1;verticalAlign=bottom;startArrow=oval;startFill=1;endArrow=block;startSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" source="mjIF9ZXAO5rnZLR19kHG-29" target="mjIF9ZXAO5rnZLR19kHG-32" edge="1">
           <mxGeometry x="-0.0037" width="60" relative="1" as="geometry">
@@ -162,16 +162,16 @@
           <mxGeometry x="590" y="580" width="740" height="280" as="geometry" />
         </mxCell>
         <mxCell id="mjIF9ZXAO5rnZLR19kHG-38" value="" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlEntity;" parent="1" vertex="1">
-          <mxGeometry x="1020" y="45" width="40" height="1495" as="geometry" />
+          <mxGeometry x="1020" y="40" width="40" height="1495" as="geometry" />
         </mxCell>
         <mxCell id="mjIF9ZXAO5rnZLR19kHG-65" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="mjIF9ZXAO5rnZLR19kHG-38" vertex="1">
-          <mxGeometry x="15" y="350" width="10" height="750" as="geometry" />
+          <mxGeometry x="15" y="360" width="10" height="750" as="geometry" />
         </mxCell>
         <mxCell id="mjIF9ZXAO5rnZLR19kHG-84" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="mjIF9ZXAO5rnZLR19kHG-38" vertex="1">
           <mxGeometry x="15" y="1320" width="10" height="70" as="geometry" />
         </mxCell>
         <mxCell id="mjIF9ZXAO5rnZLR19kHG-39" value="προϊόντα&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;&quot;&gt;φαρμακείου&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="990" width="90" height="40" as="geometry" />
+          <mxGeometry x="995" y="-55" width="90" height="40" as="geometry" />
         </mxCell>
         <mxCell id="mjIF9ZXAO5rnZLR19kHG-40" value="chenge_price()" style="html=1;verticalAlign=bottom;startArrow=oval;startFill=1;endArrow=block;startSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" source="mjIF9ZXAO5rnZLR19kHG-35" edge="1">
           <mxGeometry width="60" relative="1" as="geometry">
@@ -205,7 +205,7 @@
           <mxGeometry x="15" y="880" width="10" height="110" as="geometry" />
         </mxCell>
         <mxCell id="mjIF9ZXAO5rnZLR19kHG-44" value="παραγγελίες" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1120" y="10" width="90" height="30" as="geometry" />
+          <mxGeometry x="1130" y="-15" width="90" height="30" as="geometry" />
         </mxCell>
         <mxCell id="mjIF9ZXAO5rnZLR19kHG-45" value="get_sales()" style="html=1;verticalAlign=bottom;startArrow=oval;startFill=1;endArrow=block;startSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" source="mjIF9ZXAO5rnZLR19kHG-32" target="mjIF9ZXAO5rnZLR19kHG-43" edge="1">
           <mxGeometry x="-0.2038" width="60" relative="1" as="geometry">
@@ -227,7 +227,7 @@
           <mxGeometry x="10" y="780" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="mjIF9ZXAO5rnZLR19kHG-48" value="αρηθμός &lt;br&gt;πωλήσεων" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1260" width="80" height="40" as="geometry" />
+          <mxGeometry x="1270" y="-20" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="mjIF9ZXAO5rnZLR19kHG-49" value="display_sales()" style="html=1;verticalAlign=bottom;startArrow=oval;startFill=1;endArrow=block;startSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" source="mjIF9ZXAO5rnZLR19kHG-46" target="mjIF9ZXAO5rnZLR19kHG-47" edge="1">
           <mxGeometry width="60" relative="1" as="geometry">
@@ -340,7 +340,7 @@
           <mxGeometry x="15" y="1390" width="10" height="50" as="geometry" />
         </mxCell>
         <mxCell id="mjIF9ZXAO5rnZLR19kHG-74" value="ενδιαφερόμενα προϊόντα &lt;br&gt;premium" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1365" y="-7" width="150" height="40" as="geometry" />
+          <mxGeometry x="1365" y="-17.5" width="150" height="40" as="geometry" />
         </mxCell>
         <mxCell id="mjIF9ZXAO5rnZLR19kHG-75" value="calculate_premium_interest()" style="html=1;verticalAlign=bottom;startArrow=oval;startFill=1;endArrow=block;startSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" source="mjIF9ZXAO5rnZLR19kHG-71" target="mjIF9ZXAO5rnZLR19kHG-73" edge="1">
           <mxGeometry x="0.0674" width="60" relative="1" as="geometry">
@@ -356,10 +356,10 @@
           <mxGeometry x="1560" y="40" width="50" height="1500" as="geometry" />
         </mxCell>
         <mxCell id="mjIF9ZXAO5rnZLR19kHG-81" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="mjIF9ZXAO5rnZLR19kHG-77" vertex="1">
-          <mxGeometry x="20" y="1220" width="10" height="110" as="geometry" />
+          <mxGeometry x="20" y="1220" width="10" height="100" as="geometry" />
         </mxCell>
         <mxCell id="mjIF9ZXAO5rnZLR19kHG-79" value="αριθός premium,&lt;br&gt;&amp;nbsp;προσθήκη εναλλακτικού προϊόντος&lt;br&gt;,αύξηση stock" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1490" y="-15" width="210" height="60" as="geometry" />
+          <mxGeometry x="1500" y="-30" width="210" height="60" as="geometry" />
         </mxCell>
         <mxCell id="mjIF9ZXAO5rnZLR19kHG-80" value="display()" style="html=1;verticalAlign=bottom;startArrow=oval;startFill=1;endArrow=block;startSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" target="mjIF9ZXAO5rnZLR19kHG-77" edge="1">
           <mxGeometry width="60" relative="1" as="geometry">
@@ -389,6 +389,7 @@
             <mxPoint x="1380" y="1370" as="sourcePoint" />
             <mxPoint x="1300" y="1370" as="targetPoint" />
             <Array as="points">
+              <mxPoint x="1090" y="1360" />
               <mxPoint x="1230" y="1370" />
               <mxPoint x="1490" y="1340" />
               <mxPoint x="1100" y="1330" />
@@ -419,7 +420,7 @@
           <mxGeometry x="1760" y="40" width="40" height="1490" as="geometry" />
         </mxCell>
         <mxCell id="mjIF9ZXAO5rnZLR19kHG-91" value="premium" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1745" y="10" width="70" height="30" as="geometry" />
+          <mxGeometry x="1745" y="-7.5" width="70" height="30" as="geometry" />
         </mxCell>
         <mxCell id="mjIF9ZXAO5rnZLR19kHG-92" value="notify_premium()" style="html=1;verticalAlign=bottom;startArrow=oval;startFill=1;endArrow=block;startSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" source="mjIF9ZXAO5rnZLR19kHG-73" target="mjIF9ZXAO5rnZLR19kHG-89" edge="1">
           <mxGeometry x="0.3333" width="60" relative="1" as="geometry">
@@ -432,7 +433,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="5QEGqwwI6IggPLn_ekYq-3" value="alternative" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
-          <mxGeometry x="1460" y="1290" width="480" height="60" as="geometry" />
+          <mxGeometry x="1460" y="1290" width="480" height="50" as="geometry" />
         </mxCell>
         <mxCell id="5QEGqwwI6IggPLn_ekYq-6" value="Προσθήκη εναλλακτικού προϊόντος για το&amp;nbsp;out&lt;span style=&quot;border-color: var(--border-color); line-height: 12.84px; font-family: Arial, sans-serif;&quot; lang=&quot;EN-US&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;border-color: var(--border-color); line-height: 12.84px; font-family: Arial, sans-serif;&quot; lang=&quot;EN-US&quot;&gt;of&lt;/span&gt;&lt;span style=&quot;border-color: var(--border-color); line-height: 12.84px; font-family: Arial, sans-serif;&quot; lang=&quot;EN-US&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;border-color: var(--border-color); line-height: 12.84px; font-family: Arial, sans-serif;&quot; lang=&quot;EN-US&quot;&gt;stock&lt;/span&gt;&lt;span style=&quot;border-color: var(--border-color); line-height: 12.84px; font-family: Arial, sans-serif;&quot;&gt;&amp;nbsp;προϊόν&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="2040" y="1290" width="140" height="70" as="geometry" />
@@ -447,10 +448,43 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="5QEGqwwI6IggPLn_ekYq-9" value="alternative product" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1450" y="1320" width="120" height="30" as="geometry" />
+          <mxGeometry x="1450" y="1310" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="5QEGqwwI6IggPLn_ekYq-10" value="increase stock" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="1450" y="1340" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2B_nDuqq9ND4ZhAVYhM--1" value=":main_screen" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="195" y="30" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2B_nDuqq9ND4ZhAVYhM--2" value=":choose_instock_&lt;br&gt;outofstock_screen" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="345" y="25" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2B_nDuqq9ND4ZhAVYhM--4" value=":category_products_&lt;br&gt;screen" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="625" y="25" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2B_nDuqq9ND4ZhAVYhM--5" value=":category_screen" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="485" y="25" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2B_nDuqq9ND4ZhAVYhM--6" value=":product_management_&lt;br&gt;screen" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="777.5" y="25" width="132.5" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="2B_nDuqq9ND4ZhAVYhM--7" value=":inventory" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="980" y="22.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2B_nDuqq9ND4ZhAVYhM--8" value=":orders" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1115" y="23" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2B_nDuqq9ND4ZhAVYhM--9" value=":number_of_sales_&lt;br&gt;screen" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="23" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2B_nDuqq9ND4ZhAVYhM--10" value=":premium_interest" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="23" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2B_nDuqq9ND4ZhAVYhM--11" value=":increase_stock_add_&lt;br&gt;alt_product_screen" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1525" y="22.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2B_nDuqq9ND4ZhAVYhM--12" value=":premium" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1725" y="23" width="110" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

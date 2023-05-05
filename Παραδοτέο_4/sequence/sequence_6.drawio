@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2023-05-04T19:07:06.450Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.1 Chrome/112.0.5615.87 Electron/24.1.2 Safari/537.36" etag="_a6qL02mH-UEqeiuAgPw" version="21.2.1" type="device">
+<mxfile host="Electron" modified="2023-05-05T21:14:41.660Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.1 Chrome/112.0.5615.87 Electron/24.1.2 Safari/537.36" etag="aSmkvn3s6zsBWJ3g1NQW" version="21.2.1" type="device">
   <diagram name="Page-1" id="kONI2-lpgF3Xa1J8oByj">
     <mxGraphModel dx="521" dy="613" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -59,7 +59,7 @@
           <mxGeometry x="20" y="232" width="10" height="48" as="geometry" />
         </mxCell>
         <mxCell id="vUK2pE5NFXpl0ztqClt7-15" value="Παραγγελίες&amp;nbsp;&lt;br&gt;που έχουν ολοκληρωθή" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="495" y="33" width="150" height="40" as="geometry" />
+          <mxGeometry x="510" y="18" width="150" height="40" as="geometry" />
         </mxCell>
         <mxCell id="vUK2pE5NFXpl0ztqClt7-16" value="display_finished_orders()" style="html=1;verticalAlign=bottom;startArrow=oval;startFill=1;endArrow=block;startSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" source="vUK2pE5NFXpl0ztqClt7-13" target="vUK2pE5NFXpl0ztqClt7-14" edge="1">
           <mxGeometry width="60" relative="1" as="geometry">
@@ -92,7 +92,7 @@
           <mxGeometry x="10" y="358" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="vUK2pE5NFXpl0ztqClt7-23" value="παραγγελίες που ακόμα&lt;br&gt;&amp;nbsp;δεν έχουν σταλεί" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="670" y="38" width="150" height="40" as="geometry" />
+          <mxGeometry x="670" y="33" width="150" height="40" as="geometry" />
         </mxCell>
         <mxCell id="vUK2pE5NFXpl0ztqClt7-24" value="display_pending_orders()" style="html=1;verticalAlign=bottom;startArrow=oval;startFill=1;endArrow=block;startSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" target="vUK2pE5NFXpl0ztqClt7-18" edge="1">
           <mxGeometry width="60" relative="1" as="geometry">
@@ -119,7 +119,7 @@
           <mxGeometry x="15" y="930" width="10" height="220" as="geometry" />
         </mxCell>
         <mxCell id="vUK2pE5NFXpl0ztqClt7-29" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;προϊόντα&lt;br style=&quot;border-color: var(--border-color); background-color: rgb(255, 255, 255);&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;φαρμακειου&lt;/span&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="850" y="40" width="80" height="40" as="geometry" />
+          <mxGeometry x="845" y="18" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="vUK2pE5NFXpl0ztqClt7-32" value="frame" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="600" y="620" width="570" height="80" as="geometry" />
@@ -167,7 +167,7 @@
           <mxGeometry x="20" y="650" width="10" height="250" as="geometry" />
         </mxCell>
         <mxCell id="vUK2pE5NFXpl0ztqClt7-43" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;H&lt;span style=&quot;border-color: var(--border-color); background-color: rgb(255, 255, 255); line-height: 17.12px; font-family: Arial, sans-serif;&quot;&gt;&amp;nbsp;παραγγελία είναι έτοιμη&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;για αποδοχή&lt;/span&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1010" y="35" width="160" height="50" as="geometry" />
+          <mxGeometry x="1010" y="23" width="160" height="50" as="geometry" />
         </mxCell>
         <mxCell id="vUK2pE5NFXpl0ztqClt7-44" value="display_ready_order()" style="html=1;verticalAlign=bottom;startArrow=oval;startFill=1;endArrow=block;startSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" source="vUK2pE5NFXpl0ztqClt7-27" target="vUK2pE5NFXpl0ztqClt7-42" edge="1">
           <mxGeometry width="60" relative="1" as="geometry">
@@ -266,6 +266,24 @@
               <mxPoint x="480" y="1230" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="s2-HetEQDLqAQhIi1REy-1" value=":main_order_screen" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="225" y="73" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s2-HetEQDLqAQhIi1REy-2" value=":products" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="385" y="73" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s2-HetEQDLqAQhIi1REy-3" value=":finished_order_screen" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="515" y="73" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s2-HetEQDLqAQhIi1REy-4" value=":pending order_screen" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="685" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s2-HetEQDLqAQhIi1REy-6" value=":inventory" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s2-HetEQDLqAQhIi1REy-7" value=":accept_order_screen" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="70" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
