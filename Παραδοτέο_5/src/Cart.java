@@ -1,32 +1,40 @@
 public class Cart {
-    private int Pharmacy_Id;
-    private int User_ID;
-    private double sum;
+    double sum;
+    Pharmacy_User pUser = new Pharmacy_User();
+    Products products = new Products();
+    Temp_Cart tempCart = new Temp_Cart();
+    public Cart() {}
 
-    public Cart(){};
-    public Cart(int pharmacy_Id, int user_ID, double sum) {
-        Pharmacy_Id = pharmacy_Id;
-        User_ID = user_ID;
-        this.sum = sum;
-    }
-    public int getPharmacy_Id() {
-        return Pharmacy_Id;
-    }
-    public void setPharmacy_Id(int pharmacy_Id) {
-        Pharmacy_Id = pharmacy_Id;
-    }
-    public int getUser_ID() {
-        return User_ID;
-    }
-    public void setUser_ID(int user_ID) {
-        User_ID = user_ID;
-    }
     public double getSum() {
         return sum;
     }
 
     public void setSum(double sum) {
         this.sum = sum;
+    }
+
+    public Pharmacy_User getpUser() {
+        return pUser;
+    }
+
+    public void setpUser(Pharmacy_User pUser) {
+        this.pUser = pUser;
+    }
+
+    public Products getProducts() {
+        return products;
+    }
+
+    public void setProducts(Products products) {
+        this.products = products;
+    }
+
+    public Temp_Cart getTempCart() {
+        return tempCart;
+    }
+
+    public void setTempCart(Temp_Cart tempCart) {
+        this.tempCart = tempCart;
     }
 }
 

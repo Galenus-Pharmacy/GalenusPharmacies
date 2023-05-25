@@ -3,10 +3,14 @@ public class Main {
         // Create an ArrayList to store Products
         Products prod = new Products();
         Cart cart = new Cart();
+        Pharmacy_User pUser = new Pharmacy_User();
         prod.setProductInfo();
         Premium_User pu = new Premium_User();
         System.out.println(prod.productList.get(0).getProduct_id());
         pu.setEmail("a");
         System.out.println(pu.getEmail());
+
+        pUser.newPharmacyAccount();
+        System.out.println(pUser.pharmacyUserList.get(0).getEmail());
     }
 }

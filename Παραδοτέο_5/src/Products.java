@@ -72,7 +72,6 @@ public class Products {
 
                         System.out.print("Product Amount: ");
                         int productAmount = scanner.nextInt();
-                        scanner.nextLine(); // Consume the newline character
 
                         // Create a new Products object and add it to the productList
                         Products product = new Products(productId, productName, productPrice, productAmount);

@@ -1,109 +1,132 @@
+import java.util.ArrayList;
 import java.util.Scanner;
+
 public class User {
-    private int User_ID;
-    private String Fullname;
-    private String Username, Email,Password ,Phone_number ,Address  ;
-    private int ESY_code;
+    private int user_ID;
+    private String fullname;
+    private String username,email,password,address  ;
+    private int esy_code = 0, phone_number;
+    private boolean premium_user;
+
+    ArrayList<User> userList = new ArrayList<>();
+
     public User(){};
-    /*** SETTERS AND GETTERS */
+
+    public User(String fullname, String username, String email, String password, int phone_number, String address) {
+        this.fullname = fullname;
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.phone_number = phone_number;
+        this.address = address;
+        premium_user = false;
+    }
+
+    public User(String fullname, String username, String email, String password, int phone_number, String address,boolean premium_user) {
+        this.fullname = fullname;
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.phone_number = phone_number;
+        this.address = address;
+        this.premium_user = premium_user;
+    }
+
     public int getUser_ID() {
-        return User_ID;
+        return user_ID;
     }
 
     public void setUser_ID(int user_ID) {
-        User_ID = user_ID;
+        this.user_ID = user_ID;
     }
 
     public String getFullname() {
-        return Fullname;
+        return fullname;
     }
 
     public void setFullname(String fullname) {
-        Fullname = fullname;
+        this.fullname = fullname;
     }
 
     public String getUsername() {
-        return Username;
+        return username;
     }
 
     public void setUsername(String username) {
-        Username = username;
+        this.username = username;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
 
     public void setPassword(String password) {
-        Password = password;
+        this.password = password;
     }
 
-    public String getPhone_number() {
-        return Phone_number;
+    public int getPhone_number() {
+        return phone_number;
     }
 
-    public void setPhone_number(String phone_number) {
-        Phone_number = phone_number;
+    public void setPhone_number(int phone_number) {
+        this.phone_number = phone_number;
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public void setAddress(String address) {
-        Address = address;
+        this.address = address;
     }
 
-    public int getESY_code() {
-        return ESY_code;
+    public int getEsy_code() {
+        return esy_code;
     }
 
-    public void setESY_code(int ESY_code) {
-        this.ESY_code = ESY_code;
+    public void setEsy_code(int esy_code) {
+        this.esy_code = esy_code;
     }
 
-    /*** CONTSTRUCTOR */
-    public User(int user_ID, String fullname, String username, String email, String password, String phone_number, String address, int ESY_code) {
-        User_ID = user_ID;
-        Fullname = fullname;
-        Username = username;
-        Email = email;
-        Password = password;
-        Phone_number = phone_number;
-        Address = address;
-        this.ESY_code = ESY_code;
+    public boolean getPremium_user() {
+        return premium_user;
     }
 
-
-
-
-
-
-    void new_account(){
-        System.out.println("sign In /n");
-        System.out.println("sign Up /n");
-        Scanner userS = new Scanner(System.in);
-        String users ;
-        users = userS.nextLine();
-        if(users == "sign In"){
-            Scanner uname = new Scanner(System.in);
-            Scanner upass = new Scanner(System.in);
-            String usname , uspass;
-            usname= uname.nextLine();
-            uspass= upass.nextLine();
-
-        }
-
-
-
+    public void setPremium_user(boolean premium_user) {
+        this.premium_user = premium_user;
     }
 
+    void newUser() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Creating your account...");
+        System.out.println("Give yourname:");
+        fullname = scan.nextLine();
+        System.out.println("Give your email:");
+        email = scan.nextLine();
+        System.out.println("Give your address");
+        address = scan.nextLine();
+        System.out.println("Give your Phone Number:");
+        phone_number = scan.nextInt();
+        scan.nextLine();
+        System.out.println("Username:");
+        username = scan.nextLine();
+        System.out.println("Password:");
+        password = scan.nextLine();
+        User userObject = new User(fullname, username, email, password, phone_number, address);
+        userList.add(userObject);
+        user_ID++;
+        System.out.println(userList.get(0));
+    }
 }
+
+
+
+

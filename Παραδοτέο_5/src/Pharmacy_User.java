@@ -1,18 +1,20 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Pharmacy_User{
+public class Pharmacy_User {
 
-    private int pharmacy_ID;
+    private int pharmacy_ID = 0;
     private String pharmacy_Name;
     private String username;
     private String email;
     private String address;
-    private String phone_number;
+    private int phone_number;
     private String password;
+    ArrayList<Pharmacy_User> pharmacyUserList = new ArrayList<>();
 
-    public Pharmacy_User(){}
+    public Pharmacy_User() {}
 
-    public Pharmacy_User(int pharmacy_ID, String pharmacy_Name,String username, String email, String address, String phone_number, String password) {
+    public Pharmacy_User(int pharmacy_ID, String pharmacy_Name, String username, String email, String address, int phone_number, String password) {
         this.pharmacy_ID = pharmacy_ID;
         this.pharmacy_Name = pharmacy_Name;
         this.username = username;
@@ -63,11 +65,11 @@ public class Pharmacy_User{
         this.address = address;
     }
 
-    public String getPhone_number() {
+    public int getPhone_number() {
         return phone_number;
     }
 
-    public void setPhone_number(String phone_number) {
+    public void setPhone_number(int phone_number) {
         this.phone_number = phone_number;
     }
 
@@ -80,14 +82,26 @@ public class Pharmacy_User{
     }
 
 
+    void newPharmacyAccount() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Creating your pharmacy account...");
+        System.out.println("Give your pharmacy name:");
+        pharmacy_Name = scan.nextLine();
+        System.out.println("Give your email:");
+        email = scan.nextLine();
+        System.out.println("Give your address");
+        address = scan.nextLine();
+        System.out.println("Give your Phone Number:");
+        phone_number = scan.nextInt();
+        scan.nextLine();
+        System.out.println("Username:");
+        username = scan.nextLine();
+        System.out.println("Password:");
+        password = scan.nextLine();
+        Pharmacy_User pharmacyUserObject = new Pharmacy_User(pharmacy_ID, pharmacy_Name, username, email, address, phone_number, password);
+        pharmacyUserList.add(pharmacyUserObject);
+        pharmacy_ID++;
+        System.out.println(pharmacyUserList.get(0));
+    }
+}
 
-    void new_account(){
-
-        System.out.println("sing in OR sign Up");
-        Scanner eisodos = new Scanner (System.in);
-        String usrnm ;
-        usrnm = eisodos.nextLine();
-        System.out.println(usrnm);
-
-
-    }}

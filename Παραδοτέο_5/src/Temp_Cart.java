@@ -1,49 +1,32 @@
 public class Temp_Cart {
-    private int Pharmacy_Id;
-    private double Product_Price;
-    private int Product_Id;
-    private String Product_Name;
-    private int Product_Amount;
-    public Temp_Cart(int pharmacy_Id, double product_Price, int product_Id, String product_Name, int product_Amount) {
-        Pharmacy_Id = pharmacy_Id;
-        Product_Price = product_Price;
-        Product_Id = product_Id;
-        Product_Name = product_Name;
-        Product_Amount = product_Amount;
+    double sum;
+    Pharmacy_User pUser = new Pharmacy_User();
+    Products products = new Products();
+
+    public Temp_Cart() {}
+
+    public double getSum() {
+        return sum;
     }
 
-    public int getPharmacy_Id() {
-        return Pharmacy_Id;
+    public void setSum(double sum) {
+        this.sum = sum;
     }
 
-    public void setPharmacy_Id(int pharmacy_Id) {
-        Pharmacy_Id = pharmacy_Id;
+    public Pharmacy_User getpUser() {
+        return pUser;
     }
 
-    public double getProduct_Price() {
-        return Product_Price;
+    public void setpUser(Pharmacy_User pUser) {
+        this.pUser = pUser;
     }
 
-    public void setProduct_Price(double product_Price) {
-        Product_Price = product_Price;
+    public Products getProducts() {
+        return products;
     }
 
-    public int getProduct_Id() {
-        return Product_Id;
+    public void setProducts(Products products) {
+        this.products = products;
     }
-    public void setProduct_Id(int product_Id) {
-        Product_Id = product_Id;
-    }
-    public String getProduct_Name() {
-        return Product_Name;
-    }
-    public void setProduct_Name(String product_Name) {
-        Product_Name = product_Name;
-    }
-    public int getProduct_Amount() {
-        return Product_Amount;
-    }
-    public void setProduct_Amount(int product_Amount) {
-        Product_Amount = product_Amount;
-    }
+
 }
