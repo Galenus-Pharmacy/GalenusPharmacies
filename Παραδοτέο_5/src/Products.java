@@ -1,3 +1,4 @@
+package Galenus;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -7,13 +8,15 @@ public class Products {
         private String Product_Name;
         private double Product_Price;
         private int Product_Amount;
+        private String Product_category ;
         ArrayList<Products> productList = new ArrayList<>();
         public  Products() {};
-        public Products(int product_id, String product_Name, double product_Price, int product_Amount) {
+        public Products(int product_id, String product_Name, double product_Price, int product_Amount,String product_category) {
                 Product_id = product_id;
                 Product_Name = product_Name;
                 Product_Price = product_Price;
                 Product_Amount = product_Amount;
+                Product_category = product_category;
         }
 
         public int getProduct_id() {
@@ -48,6 +51,14 @@ public class Products {
                 Product_Amount = product_Amount;
         }
 
+        public String getProduct_category() {
+                return Product_category;
+        }
+
+        public void setProduct_category(String product_category) {
+                Product_category = product_category;
+        }
+
         public void setProductInfo(){
                 Scanner scanner = new Scanner(System.in);
                 int productCount;
@@ -72,9 +83,16 @@ public class Products {
 
                         System.out.print("Product Amount: ");
                         int productAmount = scanner.nextInt();
+                        scanner.nextLine();
+
+
+                        System.out.print("Product category: ");
+                       String productCategory = scanner.nextLine();
+
+
 
                         // Create a new Products object and add it to the productList
-                        Products product = new Products(productId, productName, productPrice, productAmount);
+                        Products product = new Products(productId, productName, productPrice, productAmount , productCategory);
                         productList.add(product);
 
                         System.out.println();
@@ -87,6 +105,7 @@ public class Products {
                         System.out.println("Product Name: " + product.getProduct_Name());
                         System.out.println("Product Price: " + product.getProduct_Price());
                         System.out.println("Product Amount: " + product.getProduct_Amount());
+                        System.out.println("Product Category:"+product.getProduct_category());
                         System.out.println();
                 }
 
