@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Eshop {
     String name = "Galenus Pharmacies";
@@ -54,6 +55,73 @@ public class Eshop {
         for (String c : categories){
             System.out.println(i + ": " + c);
             i++;
+        }
+
+    }
+
+    public void showCategoryProducts(String category) {
+        int i=1;
+        System.out.println("Results for " + category + " category:");
+        for (Products product : productsList){
+            if ((product.getProduct_category().equals(category)))
+                System.out.println(i + ":" + product.getProduct_Name());
+        }
+        i++;
+    }
+
+    public void search() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Search any category, product, or pharmacy:");
+        String search = scan.nextLine();
+        for (String categor : categories){
+            if (categor.equals(search))
+                showCategoryProducts(search);
+        }
+        for (Products product : productsList){
+            if (product.getProduct_category().equals(search))
+                showProductInfo(search);
+        }
+        for (Pharmacy_User pharmUser : pharmacyUserList){
+            if (search.equals(pharmUser.getPharmacy_Name())) {
+                showPharmacyUserInfo(search);
+                System.out.println();
+                showPharmacyProducts(search);
+            }
+        }
+    }
+
+    public void showPharmacyProducts(String pharmacy) {
+        System.out.println(pharmacy + " products:");
+        for (Products productinfo : productsList){
+            if ((productinfo.getProduct_Name().equals(pharmacy))) {
+                for (Pharmacy_User pharmacyUser : pharmacyUserList)
+                    if (pharmacyUser.getPharmacy_ID() == productinfo.getPharmacy_ID())
+                        System.out.print("Pharmacy Name: " + pharmacyUser.getPharmacy_Name() + "  ");
+                System.out.print("Product ID: " + productinfo.getProduct_id()+ "  ");
+                System.out.print("Product Name: " + productinfo.getProduct_Name() + "  ");
+                System.out.print("Product Price: " + productinfo.getProduct_Price() + "  ");
+                System.out.print("Product Amount: " + productinfo.getProduct_Amount() + "  ");
+                System.out.println("Product Category:" + productinfo.getProduct_category());
+                System.out.println();
+            }
+        }
+
+    }
+
+    public void showProductInfo(String product) {
+        System.out.println("Results for " + product + ":");
+        for (Products productinfo : productsList){
+            if ((productinfo.getProduct_Name().equals(product))) {
+                for (Pharmacy_User pharmacyUser : pharmacyUserList)
+                    if (pharmacyUser.getPharmacy_ID() == productinfo.getPharmacy_ID())
+                        System.out.print("Pharmacy Name: " + pharmacyUser.getPharmacy_Name() + "  ");
+                System.out.print("Product ID: " + productinfo.getProduct_id()+ "  ");
+                System.out.print("Product Name: " + productinfo.getProduct_Name() + "  ");
+                System.out.print("Product Price: " + productinfo.getProduct_Price() + "  ");
+                System.out.print("Product Amount: " + productinfo.getProduct_Amount() + "  ");
+                System.out.println("Product Category:" + productinfo.getProduct_category());
+                System.out.println();
+            }
         }
 
     }

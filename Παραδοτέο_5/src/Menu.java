@@ -144,7 +144,7 @@ public class Menu {
                 while (flag == false) {
                     System.out.println("Welcome " + pharmacyUser.getPharmacy_Name() + " to Galenus Pharmacy");
                     System.out.println("-------------------------------");
-                    System.out.println("1.Search");
+                    System.out.println("1.Search or Show categories");
                     System.out.println("2.Add product");
                     System.out.println("3.Profile");
                     System.out.println("4.Show history order");
@@ -154,25 +154,51 @@ public class Menu {
                     switch (insert) {
                         case 1:
                             back = false;
-                            System.out.println("1. Search products");
-                            System.out.println("Go back");
-                            int search = scan.nextInt();
-                            scan.nextLine();
-                            if (search == 2)
-                                break;
-                            else {
+                            int search ;
                                 while (back == false) {
+                                    System.out.println("1. Search");
+                                    System.out.println("2. Show categories");
+                                    System.out.println("3. Go back");
+                                    int case1 = scan.nextInt();
+                                    scan.nextLine();
+                                    if (case1 == 1){
+                                        eshop.search();
+                                    }
+                                    else if (case1 == 2){
                                     eshop.showCategories();
-                                    eshop.showProducts();
-                                    System.out.println("1. Continue searching");
+                                    System.out.println("1. Find products for a category");
                                     System.out.println("2. Go back");
                                     int check = scan.nextInt();
                                     scan.nextLine();
+                                    if (check == 1){
+                                        System.out.println("Give the category you are interested in:");
+                                        String category = scan.nextLine();
+                                        eshop.showCategoryProducts(category);
+                                        System.out.println("1. Get info for a product");
+                                        System.out.println("2. Go back:");
+                                        check = scan.nextInt();
+                                        scan.nextLine();
+                                        if (check == 1){
+                                            System.out.println("Give the product you are interested in:");
+                                            String product = scan.nextLine();
+                                            eshop.showProductInfo(product);
+                                            System.out.println("1. Go back");
+                                            int c = scan.nextInt();
+                                            scan.nextLine();
+                                            if (c == 1)
+                                                back = true;
+                                        }
+
+                                            else if (check == 2)
+                                                back = true;
+                                    }
                                     if (check == 2) {
                                         back = true;
                                     }
+                                  }
+                                    else if (case1 == 3)
+                                        back = true;
                                 }
-                            }
                             break;
 
                         case 2:
@@ -203,13 +229,17 @@ public class Menu {
                                 break;
                             else {
                                 while (back == false) {
-                                    // getUserInfo(username,password);
-                                    System.out.println(pharmacyUser.getPharmacy_ID());
-                                    System.out.println(pharmacyUser.getPharmacy_Name());
-                                    System.out.println(pharmacyUser.getAddress());
-                                    System.out.println(pharmacyUser.getPhone_number());
-                                    System.out.println(pharmacyUser.getEmail());
-                                    System.out.println(pharmacyUser.getUsername());
+                                    System.out.print("Pharmacy ID: " + pharmacyUser.getPharmacy_ID());
+                                    System.out.println();
+                                    System.out.print("Pharmacy Name: " + pharmacyUser.getPharmacy_Name());
+                                    System.out.println();
+                                    System.out.print("Address: " + pharmacyUser.getAddress());
+                                    System.out.println();
+                                    System.out.print("Phone number: " + pharmacyUser.getPhone_number());
+                                    System.out.println();
+                                    System.out.print("Email: " + pharmacyUser.getEmail());
+                                    System.out.println();
+                                    System.out.print("Username: " + pharmacyUser.getUsername());
                                     System.out.println();
                                     System.out.println("1. Go Back");
                                     int check = scan.nextInt();
@@ -256,7 +286,7 @@ public class Menu {
                 while (flag == false) {
                     System.out.println("Welcome " + user.getFullname() + " to Galenus Pharmacy");
                     System.out.println("------------------------");
-                    System.out.println("1.Search ");
+                    System.out.println("1.Search or Show categories");
                     System.out.println("2.Favorites");
                     System.out.println("3.Products category");
                     System.out.println("4.Profile");
@@ -268,24 +298,50 @@ public class Menu {
                     switch (eisodos) {
                         case 1:
                             back = false;
-                            System.out.println("1. Search products");
-                            System.out.println("Go back");
-                            int search = scan.nextInt();
-                            scan.nextLine();
-                            if (search == 2)
-                                break;
-                            else {
-                                while (back == false) {
+                            int search ;
+                            while (back == false) {
+                                System.out.println("1. Search");
+                                System.out.println("2. Show categories");
+                                System.out.println("3. Go back");
+                                int case1 = scan.nextInt();
+                                scan.nextLine();
+                                if (case1 == 1){
+                                    eshop.search();
+                                }
+                                else if (case1 == 2){
                                     eshop.showCategories();
-                                    eshop.showProducts();
-                                    System.out.println("1. Continue searching");
+                                    System.out.println("1. Find products for a category");
                                     System.out.println("2. Go back");
                                     int check = scan.nextInt();
                                     scan.nextLine();
+                                    if (check == 1){
+                                        System.out.println("Give the category you are interested in:");
+                                        String category = scan.nextLine();
+                                        eshop.showCategoryProducts(category);
+                                        System.out.println("1. Get info for a product");
+                                        System.out.println("2. Go back:");
+                                        check = scan.nextInt();
+                                        scan.nextLine();
+                                        if (check == 1){
+                                            System.out.println("Give the product you are interested in:");
+                                            String product = scan.nextLine();
+                                            eshop.showProductInfo(product);
+                                            System.out.println("1. Go back");
+                                            int c = scan.nextInt();
+                                            scan.nextLine();
+                                            if (c == 1)
+                                                back = true;
+                                        }
+
+                                        else if (check == 2)
+                                            back = true;
+                                    }
                                     if (check == 2) {
                                         back = true;
                                     }
                                 }
+                                else if (case1 == 3)
+                                    back = true;
                             }
                             break;
 
@@ -345,13 +401,17 @@ public class Menu {
                                 break;
                             else {
                                 while (back == false) {
-                                    // getUserInfo(username,password);
-                                    System.out.println(user.getUser_ID());
-                                    System.out.println(user.getFullname());
-                                    System.out.println(user.getAddress());
-                                    System.out.println(user.getPhone_number());
-                                    System.out.println(user.getEmail());
-                                    System.out.println(user.getUsername());
+                                    System.out.print("ID: " + user.getUser_ID());
+                                    System.out.println();
+                                    System.out.print("Name: " + user.getFullname());
+                                    System.out.println();
+                                    System.out.print("Address: " + user.getAddress());
+                                    System.out.println();
+                                    System.out.print("Phone number: " + user.getPhone_number());
+                                    System.out.println();
+                                    System.out.print("Email: " + user.getEmail());
+                                    System.out.println();
+                                    System.out.print("Username: " + user.getUsername());
                                     System.out.println();
                                     System.out.println("1. Go Back");
                                     int check = scan.nextInt();
@@ -386,7 +446,7 @@ public class Menu {
                 while (flag == false) {
                     System.out.println("Welcome " + pharmacyUser.getPharmacy_Name() + " to Galenus Pharmacy");
                     System.out.println("-------------------------------");
-                    System.out.println("1.Search");
+                    System.out.println("1.Search or Show categories");
                     System.out.println("2.Add product");
                     System.out.println("3.Profile");
                     System.out.println("4.Show history order");
@@ -396,24 +456,50 @@ public class Menu {
                     switch (insert) {
                         case 1:
                             back = false;
-                            System.out.println("1. Search products");
-                            System.out.println("Go back");
-                            int search = scan.nextInt();
-                            scan.nextLine();
-                            if (search == 2)
-                                break;
-                            else {
-                                while (back == false) {
+                            int search ;
+                            while (back == false) {
+                                System.out.println("1. Search");
+                                System.out.println("2. Show categories");
+                                System.out.println("3. Go back");
+                                int case1 = scan.nextInt();
+                                scan.nextLine();
+                                if (case1 == 1){
+                                    eshop.search();
+                                }
+                                else if (case1 == 2){
                                     eshop.showCategories();
-                                    eshop.showProducts();
-                                    System.out.println("1. Continue searching");
+                                    System.out.println("1. Find products for a category");
                                     System.out.println("2. Go back");
                                     int check = scan.nextInt();
                                     scan.nextLine();
+                                    if (check == 1){
+                                        System.out.println("Give the category you are interested in:");
+                                        String category = scan.nextLine();
+                                        eshop.showCategoryProducts(category);
+                                        System.out.println("1. Get info for a product");
+                                        System.out.println("2. Go back:");
+                                        check = scan.nextInt();
+                                        scan.nextLine();
+                                        if (check == 1){
+                                            System.out.println("Give the product you are interested in:");
+                                            String product = scan.nextLine();
+                                            eshop.showProductInfo(product);
+                                            System.out.println("1. Go back");
+                                            int c = scan.nextInt();
+                                            scan.nextLine();
+                                            if (c == 1)
+                                                back = true;
+                                        }
+
+                                        else if (check == 2)
+                                            back = true;
+                                    }
                                     if (check == 2) {
                                         back = true;
                                     }
                                 }
+                                else if (case1 == 3)
+                                    back = true;
                             }
                             break;
 
@@ -445,7 +531,6 @@ public class Menu {
                                 break;
                             else {
                                 while (back == false) {
-                                    // getUserInfo(username,password);
                                     System.out.print("Pharmacy ID: " + pharmacyUser.getPharmacy_ID());
                                     System.out.println();
                                     System.out.print("Pharmacy Name: " + pharmacyUser.getPharmacy_Name());
@@ -506,7 +591,7 @@ public class Menu {
                 while (flag == false) {
                     System.out.println("Welcome " + user.getFullname() + " to Galenus Pharmacy");
                     System.out.println("------------------------");
-                    System.out.println("1.Search ");
+                    System.out.println("1.Search or Show categories");
                     System.out.println("2.Favorites");
                     System.out.println("3.Products category");
                     System.out.println("4.Profile");
@@ -518,27 +603,52 @@ public class Menu {
                     switch (eisodos) {
                         case 1:
                             back = false;
-                            System.out.println("1. Search products");
-                            System.out.println("Go back");
-                            int search = scan.nextInt();
-                            scan.nextLine();
-                            if (search == 2)
-                                break;
-                            else {
-                                while (back == false) {
+                            int search ;
+                            while (back == false) {
+                                System.out.println("1. Search");
+                                System.out.println("2. Show categories");
+                                System.out.println("3. Go back");
+                                int case1 = scan.nextInt();
+                                scan.nextLine();
+                                if (case1 == 1){
+                                    eshop.search();
+                                }
+                                else if (case1 == 2){
                                     eshop.showCategories();
-                                    eshop.showProducts();
-                                    System.out.println("1. Continue searching");
+                                    System.out.println("1. Find products for a category");
                                     System.out.println("2. Go back");
                                     int check = scan.nextInt();
                                     scan.nextLine();
+                                    if (check == 1){
+                                        System.out.println("Give the category you are interested in:");
+                                        String category = scan.nextLine();
+                                        eshop.showCategoryProducts(category);
+                                        System.out.println("1. Get info for a product");
+                                        System.out.println("2. Go back:");
+                                        check = scan.nextInt();
+                                        scan.nextLine();
+                                        if (check == 1){
+                                            System.out.println("Give the product you are interested in:");
+                                            String product = scan.nextLine();
+                                            eshop.showProductInfo(product);
+                                            System.out.println("1. Go back");
+                                            int c = scan.nextInt();
+                                            scan.nextLine();
+                                            if (c == 1)
+                                                back = true;
+                                        }
+
+                                        else if (check == 2)
+                                            back = true;
+                                    }
                                     if (check == 2) {
                                         back = true;
                                     }
                                 }
+                                else if (case1 == 3)
+                                    back = true;
                             }
                             break;
-
 
                         case 2:
                             back = false;
@@ -595,7 +705,6 @@ public class Menu {
                                 break;
                             else {
                                 while (back == false) {
-                                    // getUserInfo(username,password);
                                     System.out.print("ID: " + user.getUser_ID());
                                     System.out.println();
                                     System.out.print("Name: " + user.getFullname());
@@ -627,5 +736,6 @@ public class Menu {
             }
         }
     }
+
 
 }
