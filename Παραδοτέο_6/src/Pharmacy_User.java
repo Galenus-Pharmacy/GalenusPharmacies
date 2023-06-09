@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Pharmacy_User {
 
     private int pharmacy_ID = 0;
@@ -7,13 +5,12 @@ public class Pharmacy_User {
     private String username;
     private String email;
     private String address;
-    private int phone_number;
+    private long phone_number;
     private String password;
-    ArrayList<Pharmacy_User> pharmacyUserList = new ArrayList<>();
 
     public Pharmacy_User() {}
 
-    public Pharmacy_User(int pharmacy_ID, String pharmacy_Name, String username, String email, String address, int phone_number, String password) {
+    public Pharmacy_User(int pharmacy_ID, String pharmacy_Name, String username, String email, String address, long phone_number, String password) {
         this.pharmacy_ID = pharmacy_ID;
         this.pharmacy_Name = pharmacy_Name;
         this.username = username;
@@ -64,11 +61,11 @@ public class Pharmacy_User {
         this.address = address;
     }
 
-    public int getPhone_number() {
+    public long getPhone_number() {
         return phone_number;
     }
 
-    public void setPhone_number(int phone_number) {
+    public void setPhone_number(long phone_number) {
         this.phone_number = phone_number;
     }
 

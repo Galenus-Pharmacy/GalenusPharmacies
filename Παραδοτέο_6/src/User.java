@@ -4,14 +4,15 @@ public class User {
     private int user_ID = 0;
     private String fullname;
     private String username,email,password,address  ;
-    private int esy_code = 0, phone_number;
+    private int esy_code = 0;
+    private long phone_number;
     private boolean premium_user = false;
 
     ArrayList<User> userList = new ArrayList<>();
 
     public User(){};
 
-    public User(int user_ID, String fullname, String username, String email, String password, int phone_number, String address) {
+    public User(int user_ID, String fullname, String username, String email, String password, long phone_number, String address) {
         this.user_ID = user_ID;
         this.fullname = fullname;
         this.username = username;
@@ -62,11 +63,11 @@ public class User {
         this.password = password;
     }
 
-    public int getPhone_number() {
+    public long getPhone_number() {
         return phone_number;
     }
 
-    public void setPhone_number(int phone_number) {
+    public void setPhone_number(long phone_number) {
         this.phone_number = phone_number;
     }
 

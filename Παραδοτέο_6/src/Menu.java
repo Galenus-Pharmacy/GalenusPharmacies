@@ -8,13 +8,14 @@ public class Menu {
     private int pharmacy_ID = 0, user_ID = 0, product_ID = 0;
 
     public int getUserInfo(String username,String password) {
+
         for (Pharmacy_User pharmacyUserE : eshop.pharmacyUserList) {
             if (pharmacyUserE.getUsername().equals(username) && pharmacyUserE.getPassword().equals(password)) {
                 int pharmacyID = pharmacyUserE.getPharmacy_ID();
                 String pharmacyName = pharmacyUserE.getPharmacy_Name();
                 String pharmacyEmail = pharmacyUserE.getEmail();
                 String pharmacyAddress = pharmacyUserE.getAddress();
-                int pharmacyPhone = pharmacyUserE.getPhone_number();
+                long pharmacyPhone = pharmacyUserE.getPhone_number();
                 pharmacyUser = new Pharmacy_User(pharmacyID, pharmacyName, username, pharmacyEmail, pharmacyAddress, pharmacyPhone, password);
                 return 1;
             }
@@ -26,7 +27,7 @@ public class Menu {
                 String name = userE.getFullname();
                 String email = userE.getEmail();
                 String address = userE.getAddress();
-                int phone = userE.getPhone_number();
+                long phone = userE.getPhone_number();
                 user = new User(ID, name, username, email, password, phone, address);
                 return 2;
             }
@@ -44,7 +45,7 @@ public class Menu {
         System.out.println("Give your address");
         String address = scan.nextLine();
         System.out.println("Give your Phone Number:");
-        int phone_number = scan.nextInt();
+        long phone_number = scan.nextLong();
         scan.nextLine();
         System.out.println("Username:");
         String username = scan.nextLine();
@@ -65,7 +66,7 @@ public class Menu {
         System.out.println("Give your address");
         String address = scan.nextLine();
         System.out.println("Give your Phone Number:");
-        int phone_number = scan.nextInt();
+        long phone_number = scan.nextLong();
         scan.nextLine();
         System.out.println("Username:");
         String username = scan.nextLine();

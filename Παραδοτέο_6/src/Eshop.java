@@ -48,6 +48,7 @@ public class Eshop {
         int i=1;
         int pharmacy_ID = -1;
         int product_ID = -1;
+        double price = 0;
         String user = null, product = null, pharmacy = null ;
         for (User user2 :userList)
             if (user2.getUser_ID() == user_id) {
@@ -61,13 +62,14 @@ public class Eshop {
                         pharmacy_ID = productinfo.getPharmacy_ID();
                         product_ID = productinfo.getProduct_id();
                         product = productinfo.getProduct_Name();
+                        price = productinfo.getProduct_Price();
                         for (Pharmacy_User pharmacyUser : pharmacyUserList)
                             if (pharmacyUser.getPharmacy_ID() == pharmacy_ID) {
                                 pharmacy = pharmacyUser.getPharmacy_Name();
                             }
                     }
                 }
-                System.out.print(i + ":" + " Product: " + product + "  Pharmacy Name:" + pharmacy);
+                System.out.print(i + ":" + " Product:" + product + " Product Price:$" + price + "  Pharmacy Name:" + pharmacy);
                 System.out.println();
                 i++;
             }
