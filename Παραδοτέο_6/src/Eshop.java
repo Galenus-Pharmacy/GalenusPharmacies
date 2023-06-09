@@ -6,11 +6,132 @@ public class Eshop {
     User user;
     Pharmacy_User pharmacyUser;
     Products products;
+    Favorite favorite;
+    Cart cart;
     ArrayList<User> userList = new ArrayList<>();
     ArrayList<Pharmacy_User> pharmacyUserList = new ArrayList<>();
     ArrayList<Products> productsList = new ArrayList<>();
     ArrayList<String> categories = new ArrayList<>();
-    ArrayList<Favortie> favorite = new ArrayList<>();
+    ArrayList<Favorite> favoriteList = new ArrayList<>();
+    ArrayList<Cart> cartList = new ArrayList<>();
+
+    public void addToFavorites(String product,int userID, String pharm) {
+        int pharm_id = -1;
+        int prod_id = -1;
+        boolean exists = false;
+        for (Pharmacy_User pharmacyUser : pharmacyUserList)
+            if (pharmacyUser.getPharmacy_Name().equals(pharm)) {
+                pharm_id = pharmacyUser.getPharmacy_ID();
+            }
+        for (Products productinfo : productsList) {
+            if (productinfo.getProduct_Name().equals(product) && productinfo.getPharmacy_ID() == pharm_id) {
+                prod_id = productinfo.getProduct_id();
+             //   favorite = new Favorite(prod_id, userID, pharm_id);
+               // favoriteList.add(favorite);
+            }
+        }
+        for (Favorite fav : favoriteList) {
+            if (fav.getUser_ID() == userID && fav.getPharmacy_ID() == pharm_id && fav.getProduct_ID() == prod_id) {
+                exists = true;
+                favoriteList.remove(fav);
+                favorite = new Favorite(prod_id, userID, pharm_id);
+                favoriteList.add(favorite);
+            }
+        }
+        if (!exists) {
+            favorite = new Favorite(prod_id, userID, pharm_id);
+            favoriteList.add(favorite);
+        }
+    }
+
+    public void showUserFavorites(int user_id) {
+        int i=1;
+        int pharmacy_ID = -1;
+        int product_ID = -1;
+        String user = null, product = null, pharmacy = null ;
+        for (User user2 :userList)
+            if (user2.getUser_ID() == user_id) {
+                user = user2.getFullname();
+            }
+        System.out.println("Results for " + user + " favorite list:");
+        for (Favorite favor : favoriteList){
+            if (favor.getUser_ID() == user_id) {
+                for (Products productinfo : productsList) {
+                    if (productinfo.getPharmacy_ID() == favor.getPharmacy_ID()) {
+                        pharmacy_ID = productinfo.getPharmacy_ID();
+                        product_ID = productinfo.getProduct_id();
+                        product = productinfo.getProduct_Name();
+                        for (Pharmacy_User pharmacyUser : pharmacyUserList)
+                            if (pharmacyUser.getPharmacy_ID() == pharmacy_ID) {
+                                pharmacy = pharmacyUser.getPharmacy_Name();
+                            }
+                    }
+                }
+                System.out.print(i + ":" + " Product: " + product + "  Pharmacy Name:" + pharmacy);
+                System.out.println();
+                i++;
+            }
+        }
+    }
+
+    public void addToShoppingCart(String product,int userID, String pharm,int amount) {
+        int pharm_id = -1;
+        int prod_id = -1;
+        double productPrice = 0;
+        boolean exists = false;
+        for (Pharmacy_User pharmacyUser : pharmacyUserList)
+            if (pharmacyUser.getPharmacy_Name().equals(pharm)) {
+                pharm_id = pharmacyUser.getPharmacy_ID();
+            }
+        for (Products productinfo : productsList) {
+            if (productinfo.getProduct_Name().equals(product) && productinfo.getPharmacy_ID() == pharm_id) {
+                prod_id = productinfo.getProduct_id();
+                productPrice = productinfo.getProduct_Price() * amount;
+            }
+        }
+                for (Cart cartt : cartList) {
+                    if (cartt.getUser_ID() == userID && cartt.getPharmacy_ID() == pharm_id && cart.getProduct_ID() == prod_id) {
+                        exists = true;
+                        cartList.remove(cartt);
+                        cart = new Cart(prod_id, pharm_id, amount, userID, productPrice);
+                        cartList.add(cart);
+                    }
+                }
+                    if (!exists) {
+                        cart = new Cart(prod_id, pharm_id, amount, userID, productPrice);
+                        cartList.add(cart);
+                    }
+    }
+
+    public void showUserCart(int user_id) {
+        int i=1;
+        int pharmacy_ID = -1;
+        int product_ID = -1;
+        String user = null, product = null, pharmacy = null ;
+        for (User user2 :userList)
+            if (user2.getUser_ID() == user_id) {
+                user = user2.getFullname();
+            }
+        System.out.println("Results for " + user + " cart list:");
+        for (Cart cart : cartList){
+            if (cart.getUser_ID() == user_id) {
+                for (Products productinfo : productsList) {
+                    if (productinfo.getPharmacy_ID() == cart.getPharmacy_ID()) {
+                        pharmacy_ID = productinfo.getPharmacy_ID();
+                        product_ID = productinfo.getProduct_id();
+                        product = productinfo.getProduct_Name();
+                        for (Pharmacy_User pharmacyUser : pharmacyUserList)
+                            if (pharmacyUser.getPharmacy_ID() == pharmacy_ID) {
+                                pharmacy = pharmacyUser.getPharmacy_Name();
+                            }
+                    }
+                }
+                System.out.print(i + ":" + " Product:" + product + " Product Amount:" + cart.getProduct_Amount() + " Product Price:$" + cart.getPrice() + "  Pharmacy Name:" + pharmacy);
+                System.out.println();
+                i++;
+            }
+        }
+    }
 
     public void addPharmacyUser(Pharmacy_User pharmacyUser) {
         try {

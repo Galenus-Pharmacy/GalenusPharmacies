@@ -2,7 +2,16 @@ public class Cart {
     int Product_ID;
     int Pharmacy_ID;
     int Product_Amount;
+    double price;
     int User_ID;
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 
     public int getProduct_ID() {
         return Product_ID;
@@ -38,10 +47,11 @@ public class Cart {
 
     public Cart(){}
 
-    public Cart(int product_ID, int pharmacy_ID, int product_Amount, int user_ID) {
+    public Cart(int product_ID, int pharmacy_ID, int product_Amount, int user_ID, double price) {
         Product_ID = product_ID;
         Pharmacy_ID = pharmacy_ID;
         Product_Amount = product_Amount;
         User_ID = user_ID;
+        this.price = price;
     }
 }

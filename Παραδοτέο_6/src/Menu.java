@@ -86,7 +86,6 @@ public class Menu {
         boolean flag = false;
         System.out.print("Enter the number of products you want to add: ");
         productCount = scanner.nextInt();
-        scanner.nextLine(); // Consume the newline character
 
         for (int i = 0; i < productCount; i++) {
             System.out.println("Enter details for the (" + (i+1) + ") product you want to add:");
@@ -319,7 +318,7 @@ public class Menu {
                                         String category = scan.nextLine();
                                         eshop.showCategoryProducts(category);
                                         System.out.println("1. Get info for a product");
-                                        System.out.println("2. Go back:");
+                                        System.out.println("2. Go back");
                                         check = scan.nextInt();
                                         scan.nextLine();
                                         if (check == 1){
@@ -332,7 +331,22 @@ public class Menu {
                                             int c = scan.nextInt();
                                             scan.nextLine();
                                             if (c == 1){
-                                               // addToFavorites();
+                                                System.out.println("Give the name of the pharmacy you want to add the product to favorites from:");
+                                                String pharm = scan.nextLine();
+                                                eshop.addToFavorites(product,user.getUser_ID(),pharm);
+                                                System.out.println("Product added to favorites.");
+                                                eshop.showUserFavorites(user.getUser_ID());
+                                                back = true;
+                                            }
+                                            if (c == 2){
+                                                System.out.println("Give the name of the pharmacy you want to buy the product from:");
+                                                String pharm = scan.nextLine();
+                                                System.out.println("Give the amount of " + product + " you want to add to your shopping cart:");
+                                                int amount = scan.nextInt();
+                                                scan.nextLine();
+                                                eshop.addToShoppingCart(product, user.getUser_ID(),pharm, amount);
+                                                System.out.println("Product added to shopping cart.");
+                                                back = true;
                                             }
                                             if (c == 3)
                                                 back = true;
@@ -623,17 +637,38 @@ public class Menu {
                                         String category = scan.nextLine();
                                         eshop.showCategoryProducts(category);
                                         System.out.println("1. Get info for a product");
-                                        System.out.println("2. Go back:");
+                                        System.out.println("2. Go back");
                                         check = scan.nextInt();
                                         scan.nextLine();
                                         if (check == 1){
                                             System.out.println("Give the product you are interested in:");
                                             String product = scan.nextLine();
                                             eshop.showProductInfo(product);
-                                            System.out.println("1. Go back");
+                                            System.out.println("1. Add Product to Favorites");
+                                            System.out.println("2. Add Product to Shopping Cart");
+                                            System.out.println("3. Go back");
                                             int c = scan.nextInt();
                                             scan.nextLine();
-                                            if (c == 1)
+                                            if (c == 1){
+                                                System.out.println("Give the name of the pharmacy you want to add the product to favorites from:");
+                                                String pharm = scan.nextLine();
+                                                eshop.addToFavorites(product,user.getUser_ID(),pharm);
+                                                System.out.println("Product added to favorites.");
+                                                eshop.showUserFavorites(user.getUser_ID());
+                                                back = true;
+                                            }
+                                            if (c == 2){
+                                                System.out.println("Give the name of the pharmacy you want to buy the product from:");
+                                                String pharm = scan.nextLine();
+                                                System.out.println("Give the amount of " + product + " you want to add to your shopping cart:");
+                                                int amount = scan.nextInt();
+                                                scan.nextLine();
+                                                eshop.addToShoppingCart(product, user.getUser_ID(),pharm, amount);
+                                                System.out.println("Product added to shopping cart.");
+                                                eshop.showUserCart(user.getUser_ID());
+                                                back = true;
+                                            }
+                                            if (c == 3)
                                                 back = true;
                                         }
 
