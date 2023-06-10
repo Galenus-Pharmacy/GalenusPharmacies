@@ -8,6 +8,9 @@ public class Main {
         Premium_User pu = new Premium_User();
         Eshop es = new Eshop();
         Menu menu = new Menu(es);
+        int pharmacyId = 0;
+        int productId = 0;
+        int userId = 0;
       /*  System.out.println(prod.productList.get(0).getProduct_id());
         pu.setEmail("a");
         System.out.println(pu.getEmail());
@@ -26,47 +29,76 @@ public class Main {
         //es.showProducts();
         //es.showCategories();
         //System.out.println(es.userList.get(0).getEmail());
-        pUser = new Pharmacy_User(0,"Nikolas","Nikolaos_Pharmacy","Nikolaospharmacy@gmail.com","Riga Feraiou_13",6912457800L,"Nikolas1!");
+        pUser = new Pharmacy_User(pharmacyId,"Nikolas","Nikolaos_Pharmacy","Nikolaospharmacy@gmail.com","Riga Feraiou_13",6912457800L,"Nikolas1!");
         es.pharmacyUserList.add(pUser);
+        pharmacyId++;
+        menu.setPharmacy_ID(pharmacyId);
 
-        pUser = new Pharmacy_User(1,"Sophie","SophiePharmacy","SophiePharmacy@bing.com","Maizonos105",6900112233L,"SOPhie123");
+        pUser = new Pharmacy_User(pharmacyId,"Sophie","SophiePharmacy","SophiePharmacy@bing.com","Maizonos105",6900112233L,"SOPhie123");
         es.pharmacyUserList.add(pUser);
+        pharmacyId++;
+        menu.setPharmacy_ID(pharmacyId);
 
-        pUser = new Pharmacy_User(2,"Charis", "CharisPharmacy" , "CharisPharmacy@gmail.com","Korinthou123",6910245890L,"Charis12!");
+        pUser = new Pharmacy_User(pharmacyId,"Charis", "CharisPharmacy" , "CharisPharmacy@gmail.com","Korinthou123",6910245890L,"Charis12!");
         es.pharmacyUserList.add(pUser);
+        pharmacyId++;
+        menu.setPharmacy_ID(pharmacyId);
 
-        pUser = new Pharmacy_User(3,"Paris","ParisPharmacy","ParisPharmacy@yahoo.com","Korinthou2", 6932165478L,"Paris123");
+        pUser = new Pharmacy_User(pharmacyId,"Paris","ParisPharmacy","ParisPharmacy@yahoo.com","Korinthou2", 6932165478L,"Paris123");
         es.pharmacyUserList.add(pUser);
+        pharmacyId++;
+        menu.setPharmacy_ID(pharmacyId);
 
-        prod = new Products(0, 0, "Strepsils", 10, 100, "Neckpain");
+        prod = new Products(0, productId, "Strepsils", 10, 100, "Neckpain");
         es.productsList.add(prod);
+        productId++;
+        menu.setProduct_ID(productId);
 
-        prod = new Products(0, 1, "Panadol", 2, 1000, "Paracetamol");
+        prod = new Products(0, productId, "Panadol", 2, 1000, "Paracetamol");
         es.productsList.add(prod);
+        productId++;
+        menu.setProduct_ID(productId);
 
-        prod = new Products(1, 1, "Panadol", 2, 1000, "Paracetamol");
+
+        prod = new Products(1, productId, "Panadol", 2, 1000, "Paracetamol");
         es.productsList.add(prod);
+        productId++;
+        menu.setProduct_ID(productId);
 
-        prod = new Products(2, 2, "Nivea", 2, 1000, "Face Care");
+        prod = new Products(2, productId, "Nivea", 2, 1000, "Face Care");
         es.productsList.add(prod);
+        productId++;
+        menu.setProduct_ID(productId);
 
-        prod = new Products(3, 3, "Gilette", 2, 1000, "After Shave");
+        prod = new Products(3, productId, "Gilette", 2, 1000, "After Shave");
         es.productsList.add(prod);
+        productId++;
+        menu.setProduct_ID(productId);
 
-        prod = new Products(2, 4, "Depon", 2, 1000, "Paracetamol");
+        prod = new Products(2, productId, "Depon", 2, 1000, "Paracetamol");
         es.productsList.add(prod);
+        productId++;
+        menu.setProduct_ID(productId);
 
-        user = new User(0, "Charis Pissouros", "CharisPis","CharisPissou@gmail.com","Charis9",6969656510L,"Konstantinoupolews 2");
+        user = new User(userId, "Charis Pissouros", "CharisPis","CharisPissou@gmail.com","Charis9",6969656510L,"Konstantinoupolews 2");
         es.userList.add(user);
+        userId++;
+        menu.setUser_ID(userId);
 
-        user = new User(1,"Elias Alevras","AlevrasEl","AlevrasEl@gmail.com","Elias12",6920104571L,"Riga Feraiou 54");
+        user = new User(userId,"Elias Alevras","AlevrasEl","AlevrasEl@gmail.com","Elias12",6920104571L,"Riga Feraiou 54");
         es.userList.add(user);
+        userId++;
+        menu.setUser_ID(userId);
 
-        user = new User(2,"Savvas Stylianou","SavvasStyl","SavvasStyl@gmail.com","Savvis45",690012142025L,"Maizonos12");
+        user = new User(userId,"Savvas Stylianou","SavvasStyl","SavvasStyl@gmail.com","Savvis45",690012142025L,"Maizonos12");
         es.userList.add(user);
+        userId++;
+        menu.setUser_ID(userId);
 
-        user = new User(3,"Sotiris Chatzigiannis","SotirisChatz","SotChatz@gmail.com","Sot12345",690012142025L,"Maizonos 35");
+        user = new User(userId,"Sotiris Chatzigiannis","SotirisChatz","SotChatz@gmail.com","Sot12345",690012142025L,"Maizonos 35");
         es.userList.add(user);
+        userId++;
+        menu.setUser_ID(userId);
 
         menu.showMenu();
     }
