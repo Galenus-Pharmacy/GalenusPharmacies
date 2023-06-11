@@ -1,4 +1,4 @@
-public class Order {
+public class Order extends Cart{
     Cart cart;
     private int orderId = 0;
     private double totalPrice;

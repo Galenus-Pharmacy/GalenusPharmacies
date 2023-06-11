@@ -19,6 +19,7 @@ public class Eshop {
     ArrayList<Order> orderList = new ArrayList<>();
 
     int orderID = 0;
+    int orderNumber = 0;
 
     public void addToFavorites(String product, int userID, String pharm) {
         int pharm_id = -1;
@@ -97,11 +98,10 @@ public class Eshop {
             }
         }
         for (Cart cartt : cartList) {
-            if (cartt.getUser_ID() == userID && cartt.getPharmacy_ID() == pharm_id && cart.getProduct_ID() == prod_id) {
+            if (cartt.getUser_ID() == userID && cartt.getPharmacy_ID() == pharm_id && cartt.getProduct_ID() == prod_id) {
                 exists = true;
-                cartList.remove(cartt);
-                cart = new Cart(prod_id, pharm_id, amount, userID, productPrice);
-                cartList.add(cart);
+                cartt.setProduct_Amount(amount);
+                cartt.setPrice(productPrice);
             }
         }
         if (!exists) {
@@ -111,63 +111,138 @@ public class Eshop {
     }
 
     public void showShoppingCart(int userID) {
+        int i = 1;
         for (Cart cartt : cartList) {
-            int i = 1;
             String prodname = null;
             String pharmacy = null;
             double price = 0;
             if (cartt.getUser_ID() == userID) {
                 for (Products productinfo : productsList) {
-                    if (cartt.getProduct_ID() == productinfo.getProduct_id())
+                    if (cartt.getProduct_ID() == productinfo.getProduct_id() && cartt.getPharmacy_ID() == productinfo.getPharmacy_ID()) {
                         prodname = productinfo.getProduct_Name();
-                    price = productinfo.getProduct_Price();
+                        price = productinfo.getProduct_Price();
+                    }
                 }
                 for (Pharmacy_User pharmacyUser : pharmacyUserList)
                     if (pharmacyUser.getPharmacy_ID() == cartt.getPharmacy_ID()) {
                         pharmacy = pharmacyUser.getPharmacy_Name();
                     }
-            }
-            System.out.print(i + ":" + "  Pharmacy Name: " + pharmacy + "  Product: " + prodname + "  Product Price: $ " + price + "  Product Amount: " + cartt.getProduct_Amount() + "  Product total Price: $" + cartt.getPrice());
+            System.out.print(i + ":" + "  Pharmacy Name: " + pharmacy + "  Product: " + prodname + "  Product Price: $" + price + "  Product Amount: " + cartt.getProduct_Amount() + "  Product total Price: $" + cartt.getPrice());
             System.out.println();
             i++;
+            }
         }
     }
 
-    public void OrderProducts(int userID){
+    public void OrderProducts(int userID) {
         double totalCartPrice = 0;
-        double totalPrice = 0;
-        int pharmId=-1;
-        int productId=-1;
+        int pharmId = -1;
+        int productId = -1;
         int amount = -1;
-        for (Cart cartt : cartList){
-            if (cartt.getUser_ID() == userID){
-                pharmId = cartt.getPharmacy_ID();
-                productId = cartt.getProduct_ID();
-                amount = cartt.getProduct_Amount();
-                totalCartPrice = totalCartPrice + cart.getPrice()*cart.getProduct_Amount();
-                order = new Order(cartt, this.orderID,totalCartPrice);
-                orderID++;
+        for (int i = 0; i < cartList.size(); i++) {
+            if (cartList.get(i).getUser_ID() == userID) {
+                pharmId = cartList.get(i).getPharmacy_ID();
+                productId = cartList.get(i).getProduct_ID();
+                amount = cartList.get(i).getProduct_Amount();
+                totalCartPrice = totalCartPrice + cartList.get(i).getPrice();
+                order = new Order(cartList.get(i), this.orderID, totalCartPrice);
                 orderList.add(order);
                 for (Products prod : productsList)
-                    if (prod.getProduct_id() == productId && pharmId == prod.getPharmacy_ID()){
-                        cartt.setProduct_Amount(cartt.getProduct_Amount()-amount);
-                        System.out.println("Amount:" + cartt.getProduct_Amount());
+                    if (prod.getProduct_id() == productId && pharmId == prod.getPharmacy_ID()) {
+                        prod.setProduct_Amount(prod.getProduct_Amount() - amount);
                     }
-                cartList.remove(cartt);
+            }
+            cartList.remove(i);
+            i--;
+        }
+        this.orderID++;
+        System.out.println("Order :");
+        this.orderNumber++;
+        double totalOrderPrice = 0;
+        for (Order orderr : orderList) {
+            if (orderr.getOrderId() == (this.orderID-1)) {
+                for (Products prod : productsList) {
+                    if (prod.getProduct_id() == orderr.getCart().getProduct_ID() && prod.getPharmacy_ID() == orderr.getCart().getPharmacy_ID()) {
+                        System.out.print("Product: " + prod.getProduct_Name());
+                        for (Pharmacy_User puser : pharmacyUserList) {
+                            if (puser.getPharmacy_ID() == orderr.getCart().getPharmacy_ID() && prod.getProduct_id() == orderr.getCart().getProduct_ID()) {
+                                System.out.print(" Pharmacy: " + puser.getPharmacy_Name());
+                            }
+                        }
+                        totalOrderPrice = totalOrderPrice + orderr.getCart().getPrice();
+                        System.out.print(" Product Price: $" + prod.getProduct_Price());
+                        System.out.print(" Product Amount " + orderr.getCart().getProduct_Amount());
+                        System.out.print(" Product total Price: $" + orderr.getCart().getPrice());
+                        System.out.println();
+                    }
+                }
             }
         }
-        for (Order orderr : orderList){
-            if (orderr.getOrderId() == this.orderID){
-                totalPrice = totalPrice + orderr.getTotalPrice();
-            }
-        }
-        for (Order orderrr : orderList) {
-            System.out.print("Order ID:" + orderrr.getOrderId());
-            System.out.print("Cart:" + orderrr.getCart());
-            System.out.println("Price:" + orderrr.getTotalPrice());
-            System.out.println();
-        }
+        System.out.println("Total order price: $" + totalOrderPrice);
     }
+    public void OrderHistory(int pharmacyID){
+        double totalOrderPrice = 0;
+        for (Order orderr : orderList) {
+            if (pharmacyID == orderr.getCart().getPharmacy_ID()) {
+                for (User userrr : userList){
+                    if (orderr.getCart().getUser_ID() == userrr.getUser_ID()){
+                        System.out.println("Buyer Name: " + orderr.getCart().getUser_ID());
+                    }
+                }
+                for (Products prod : productsList) {
+                    if (prod.getProduct_id() == orderr.getCart().getProduct_ID() && prod.getPharmacy_ID() == orderr.getCart().getPharmacy_ID()) {
+                        System.out.print("Product: " + prod.getProduct_Name());
+                        totalOrderPrice = totalOrderPrice + orderr.getCart().getPrice();
+                        System.out.print(" Product Price: $" + prod.getProduct_Price());
+                        System.out.print(" Product Amount " + orderr.getCart().getProduct_Amount());
+                        System.out.print(" Product total Price: $" + orderr.getCart().getPrice());
+                        System.out.println();
+                    }
+                }
+            }
+        }
+        System.out.println("Total order price: $" + totalOrderPrice);
+    }
+   /* public void ShowOrder(int userID){
+        System.out.println("Order :");
+        this.orderNumber++;
+        double totalOrderPrice = 0;
+        int id = 0;
+        for (Order orderr : orderList) {
+            if (orderr.getOrderId() == id && orderr.getCart().getUser_ID() == userID) {
+                for (Products prod : productsList) {
+                    if (prod.getProduct_id() == orderr.getCart().getProduct_ID() && prod.getPharmacy_ID() == orderr.getCart().getPharmacy_ID()) {
+                        totalOrderPrice = totalOrderPrice + orderr.getTotalPrice();
+                    }
+                }
+            }
+        }
+        int number = 1;
+        for (Order orderr : orderList) {
+            System.out.println("Order " + number + ":");
+            System.out.println("Total order price: $" + totalOrderPrice);
+            if (orderr.getOrderId() == id && orderr.getCart().getUser_ID() == userID) {
+                for (Products prod : productsList) {
+                    if (prod.getProduct_id() == orderr.getCart().getProduct_ID() && prod.getPharmacy_ID() == orderr.getCart().getPharmacy_ID()) {
+                        System.out.print("Product: " + prod.getProduct_Name());
+                        for (Pharmacy_User puser : pharmacyUserList) {
+                            if (puser.getPharmacy_ID() == orderr.getCart().getPharmacy_ID() && prod.getProduct_id() == orderr.getCart().getProduct_ID()) {
+                                System.out.print(" Pharmacy: " + puser.getPharmacy_Name());
+                            }
+                        }
+                        totalOrderPrice = totalOrderPrice + orderr.getTotalPrice();
+                        System.out.print(" Product Price: $" + prod.getProduct_Price());
+                        System.out.print(" Product Amount " + orderr.getCart().getProduct_Amount());
+                        System.out.print(" Product total Price: $" + orderr.getCart().getPrice());
+                        System.out.println();
+                    }
+                }
+            }
+        }
+        System.out.println("Total order price: $" + totalOrderPrice);
+    }
+    */
+
     public void showUserProfile(int userid){
         for (User userr : userList){
             if (userr.getUser_ID() == userid) {

@@ -1,9 +1,9 @@
 public class Cart {
-    int Product_ID;
-    int Pharmacy_ID;
-    int Product_Amount;
-    double price;
-    int User_ID;
+    private int Product_ID;
+    private int Pharmacy_ID;
+    private int Product_Amount;
+    private double price;
+    private int User_ID;
 
     public double getPrice() {
         return price;

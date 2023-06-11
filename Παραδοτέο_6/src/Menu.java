@@ -151,7 +151,7 @@ public class Menu {
         Scanner scan = new Scanner(System.in);
         int sign = 0;
         while (sign != 1 && sign != 2) {
-            System.out.println("1 Sign in");
+            System.out.println("1. Sign in");
             System.out.println("2. Sign up");
             System.out.println("Choose an option: (Give number)");
             sign = scan.nextInt();
@@ -197,7 +197,6 @@ public class Menu {
                                     }
                                     else if (case1 == 2){
                                     eshop.showCategories();
-                                    System.out.println();
                                     System.out.println("1. Find products for a category");
                                     System.out.println("2. Go back");
                                     System.out.println();
@@ -208,7 +207,6 @@ public class Menu {
                                         System.out.println("Give the category you are interested in: (Give Name)");
                                         String category = scan.nextLine();
                                         eshop.showCategoryProducts(category);
-                                        System.out.println();
                                         System.out.println("1. Get info for a product");
                                         System.out.println("2. Go back:");
                                         System.out.println();
@@ -220,7 +218,6 @@ public class Menu {
                                             String product = scan.nextLine();
                                             System.out.println();
                                             eshop.showProductInfo(product);
-                                            System.out.println();
                                             System.out.println("1. Go back");
                                             System.out.println();
                                             System.out.println("Choose an option: (Give number)");
@@ -254,7 +251,6 @@ public class Menu {
                                 break;
                             else {
                                 newProducts();
-                                System.out.println();
                                 System.out.println("Products added to your phamacy!");
                                 System.out.println();
                                 back = true;
@@ -275,7 +271,6 @@ public class Menu {
                             else {
                                 while (back == false) {
                                     eshop.showPharmacyProfile(pharmacyUser.getPharmacy_ID());
-                                    System.out.println();
                                     System.out.println("1. Edit Profile");
                                     System.out.println("2. Go back");
                                     System.out.println();
@@ -348,8 +343,7 @@ public class Menu {
                                 break;
                             else {
                                 while (back == false) {
-                                    // getOrderHistory;
-                                    System.out.println();
+                                    eshop.OrderHistory(pharmacyUser.getPharmacy_ID());
                                     System.out.println("1. Go Back");
                                     System.out.println();
                                     System.out.println("Choose an option: (Give number)");
@@ -429,7 +423,6 @@ public class Menu {
                                         System.out.println("Give the category you are interested in: (Give name)");
                                         String category = scan.nextLine();
                                         eshop.showCategoryProducts(category);
-                                        System.out.println();
                                         System.out.println("1. Get info for a product");
                                         System.out.println("2. Go back");
                                         System.out.println();
@@ -440,7 +433,6 @@ public class Menu {
                                             System.out.println("Give the product you are interested in: (Give name)");
                                             String product = scan.nextLine();
                                             eshop.showProductInfo(product);
-                                            System.out.println();
                                             System.out.println("1. Add Product to Favorites");
                                             System.out.println("2. Add Product to Shopping Cart");
                                             System.out.println("3. Go back");
@@ -565,7 +557,6 @@ public class Menu {
                             else {
                                 while (back == false) {
                                     eshop.showShoppingCart(user.getUser_ID());
-                                    System.out.println();
                                     System.out.println("1. Complete Order");
                                     System.out.println("2. Remove a product from shopping cart");
                                     System.out.println("3. Remove all products from shopping cart");
@@ -742,7 +733,6 @@ public class Menu {
                                 }
                                 else if (case1 == 2){
                                     eshop.showCategories();
-                                    System.out.println();
                                     System.out.println("1. Find products for a category");
                                     System.out.println("2. Go back");
                                     System.out.println();
@@ -754,7 +744,6 @@ public class Menu {
                                         String category = scan.nextLine();
                                         System.out.println();
                                         eshop.showCategoryProducts(category);
-                                        System.out.println();
                                         System.out.println("1. Get info for a product");
                                         System.out.println("2. Go back:");
                                         System.out.println();
@@ -766,7 +755,6 @@ public class Menu {
                                             String product = scan.nextLine();
                                             System.out.println();
                                             eshop.showProductInfo(product);
-                                            System.out.println();
                                             System.out.println("1. Go back");
                                             System.out.println();
                                             System.out.println("Choose an option: (Give number)");
@@ -800,7 +788,6 @@ public class Menu {
                                 break;
                             else {
                                 newProducts();
-                                System.out.println();
                                 System.out.println("Products added to your phamacy!");
                                 System.out.println();
                                 back = true;
@@ -821,7 +808,6 @@ public class Menu {
                             else {
                                 while (back == false) {
                                     eshop.showPharmacyProfile(pharmacyUser.getPharmacy_ID());
-                                    System.out.println();
                                     System.out.println("1. Edit Profile");
                                     System.out.println("2. Go back");
                                     System.out.println();
@@ -894,8 +880,7 @@ public class Menu {
                                 break;
                             else {
                                 while (back == false) {
-                                    // getOrderHistory;
-                                    System.out.println();
+                                    eshop.OrderHistory(pharmacyUser.getPharmacy_ID());
                                     System.out.println("1. Go Back");
                                     System.out.println();
                                     System.out.println("Choose an option: (Give number)");
@@ -919,7 +904,6 @@ public class Menu {
                 flag = true;
             }
             else if (creatingAccount == 2) {
-                //menu for the User
                 newUserInfo();
                 while (flag == false) {
                     System.out.println();
@@ -978,7 +962,6 @@ public class Menu {
                                         System.out.println("Give the category you are interested in: (Give name)");
                                         String category = scan.nextLine();
                                         eshop.showCategoryProducts(category);
-                                        System.out.println();
                                         System.out.println("1. Get info for a product");
                                         System.out.println("2. Go back");
                                         System.out.println();
@@ -989,7 +972,6 @@ public class Menu {
                                             System.out.println("Give the product you are interested in: (Give name)");
                                             String product = scan.nextLine();
                                             eshop.showProductInfo(product);
-                                            System.out.println();
                                             System.out.println("1. Add Product to Favorites");
                                             System.out.println("2. Add Product to Shopping Cart");
                                             System.out.println("3. Go back");
@@ -1113,7 +1095,6 @@ public class Menu {
                             else {
                                 while (back == false) {
                                     eshop.showShoppingCart(user.getUser_ID());
-                                    System.out.println();
                                     System.out.println("1. Complete Order");
                                     System.out.println("2. Remove a product from shopping cart");
                                     System.out.println("3. Remove all products from shopping cart");
